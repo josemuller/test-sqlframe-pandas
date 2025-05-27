@@ -1,9 +1,10 @@
 How to run?
 ===========
 
-1. `pip install requirements.txt`
+1. `pip install -r requirements.txt`
 2. `python data_pandas.py` -> shows you the running time for pandas
-3. `python data_sqlframe.py` -> shows you the running time for sqlframe[duckdb]
+3. `python data_polars.py` -> shows you the running time for pandas
+4. `python data_sqlframe.py` -> shows you the running time for sqlframe[duckdb]
 
 
 Benchmark
