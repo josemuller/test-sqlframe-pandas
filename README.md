@@ -9,8 +9,12 @@ How to run?
 Benchmark
 =========
 
-Pandas between 17 ms (first run) and 11.0 ms (consecutive runs)
-Polars between 35 ms (first run) and 5.0 ms (consecutive runs)
-SqlFrame[DuckDB] (2465 ms or 2.46 sec)
+
+| Library             | First Run Time | Consecutive Run Time |
+|---------------------|----------------|-----------------------|
+| Pandas              | 17 ms          | 11.0 ms               |
+| Polars              | 35 ms          | 5.0 ms                |
+| SqlFrame [DuckDB]   | 2465 ms (2.46 s)| N/A                   |
+
 
 Data is in `transformation/raw_data`
