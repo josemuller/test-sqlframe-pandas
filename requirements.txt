@@ -13,7 +13,9 @@ pandas==2.2.3
     #   -r requirements.in
     #   sqlframe
 polars==1.30.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   sparkleframe
 prettytable==3.16.0
     # via sqlframe
 py4j==0.10.9.7
@@ -28,7 +30,9 @@ pytz==2025.2
     # via pandas
 six==1.17.0
     # via python-dateutil
-sqlframe[duckdb]==3.33.1
+sparkleframe==0.0.1
+    # via -r requirements.in
+sqlframe[duckdb]==3.34.0
     # via -r requirements.in
 sqlglot==26.19.0
     # via sqlframe

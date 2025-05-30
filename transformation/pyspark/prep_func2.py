@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import pyspark.sql.functions as F
 
 def prep_func2(df):
@@ -10,7 +12,7 @@ def prep_func2(df):
                     F.get_json_object("func2_col1", "$.func2_col1_id"))
         .withColumn("func2_col3", F.when(F.col("func2_col3")=="A", "P").otherwise(F.when(F.col("func2_col3")=="X", "Z").otherwise(F.col("func2_col3"))))
         .filter(F.col("func2_col1_id").isNotNull()) # We're adding this because we'll join by this with los data
-        .filter(F.col("func2_col6")>F.lit('2024-01-01'))
+        .filter(F.col("func2_col6")>F.lit(datetime(2024, 1, 1)))
 
         # New columns
         .withColumn("func2_col7", F.when(F.col("func2_col2").rlike("(?i)xyz"), 1).otherwise(0))

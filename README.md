@@ -11,13 +11,15 @@ Benchmark
 =========
 
 
-| Library             | First Run Time | Consecutive Run Time |
-|---------------------|----------------|-----------------------|
-| Pandas              | 17 ms          | 11.0 ms               |
-| Polars              | 35 ms          | 5.0 ms                |
-| SqlFrame [DuckDB]   | 2465 ms (2.46 s)| N/A                   |
+| Library               | First Run Time   | Consecutive Run Time |
+|-----------------------|------------------|----------------------|
+| Pandas                | 17 ms            | 11.0 ms              |
+| Polars                | 35 ms            | 5.0 ms               |
+| SqlFrame [DuckDB]     | 2465 ms (2.46 s) | N/A                  |
+| SparkleFrame [Polars] | 74 ms            | 8.0ms                |
 
 
 Data is in `transformation/raw_data`.
 
 Repo created for discussion in https://github.com/eakmanrq/sqlframe/issues/409
+SparkFrame repo https://github.com/flypipe/sparkleframe
